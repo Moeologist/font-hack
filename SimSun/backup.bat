@@ -7,8 +7,6 @@ icacls c:\windows\Fonts\simsun* /save Original\acl /T
 copy C:\Windows\Fonts\simsun* Original\
 
 pushd Original
-otc2otf sarasa-regular.ttc
-otc2otf sarasa-bold.ttc
 otc2otf simsun.ttc
 ttx -t name NSimSun.ttf
 ttx -t name SimSun.ttf

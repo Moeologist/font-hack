@@ -20,7 +20,7 @@ takeown /F C:\Windows\Fonts\msyh* /A
 icacls C:\Windows\Fonts\msyh* /grant Administrators:F
 
 icacls C:\windows\Fonts\msyh* /C /setowner "NT SERVICE\TrustedInstaller"
-icacls C:\windows\Fonts\ /C /restore "Original\asl"
+icacls C:\windows\Fonts\ /C /restore "..\Original\acl"
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Microsoft Yahei & Microsoft Yahei UI (TrueType)" /t REG_SZ /d "msyh.ttc" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Microsoft Yahei Bold & Microsoft Yahei UI Bold (TrueType)" /t REG_SZ /d "msyhbd.ttc" /f
