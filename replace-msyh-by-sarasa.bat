@@ -98,7 +98,12 @@ call:Warning "Downloading sarasa fonts..."
 certutil.exe -urlcache -split -f^
  "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.36.0/sarasa-gothic-ttc-0.36.0.7z"^
  sarasa-gothic-ttc-0.36.0.7z
-7z x -y sarasa-gothic-ttc-0.36.0.7z
+certutil.exe -urlcache -split -f^
+ "https://7-zip.org/a/7z2107-x64.msi"^
+ 7z2107-x64.msi
+mkdir bin.7z
+start /wait msiexec /a 7z2107-x64.msi /qn TARGETDIR="%cd%\bin.7z"
+"%cd%\bin.7z\Files\7-Zip\7z.exe" x -y sarasa-gothic-ttc-0.36.0.7z
 
 exit /b 0
 
